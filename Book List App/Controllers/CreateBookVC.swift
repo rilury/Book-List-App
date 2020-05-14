@@ -42,7 +42,7 @@ class CreateBookVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated: animated)
+        super.viewWillAppear(animated)
         addKeyboardObservers()
     }
     
@@ -117,7 +117,7 @@ class CreateBookVC: UIViewController {
         
         let offset = keyboardFrame.size.height - view.safeAreaInsets.bottom
         
-        bookCoverTopConstraint.constant = -offset
+        bookCoverTopConstraint.constant = -offset + 100
         UIView.animate(withDuration: animationDuration, animations: { [weak self] in
             self?.view.layoutIfNeeded()
         })

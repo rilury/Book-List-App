@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBj-Ln-8m9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,14 +12,14 @@
             <objects>
                 <viewController storyboardIdentifier="BookListVC" id="fKd-p0-yhx" customClass="BookListVC" customModule="Book_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rkD-yV-Uth">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StF-LJ-2WI">
-                                <rect key="frame" x="41.5" y="161.5" width="331" height="242.5"/>
+                                <rect key="frame" x="37.5" y="124.5" width="300" height="187"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any book saved. HIt + to add some books!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW2-DL-Bms">
-                                        <rect key="frame" x="20" y="97.5" width="291" height="48"/>
+                                        <rect key="frame" x="20" y="57.5" width="260" height="72"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -33,14 +33,14 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tic-xL-xSI">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bookListCell" rowHeight="120" id="92F-ps-3aI" customClass="BookTableViewCell" customModule="Book_List_App" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="92F-ps-3aI" id="v1b-PL-eeN">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UsE-Yd-A8d" customClass="CustomImageView" customModule="Book_List_App" customModuleProvider="target">
@@ -62,7 +62,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocl-9N-1pr">
-                                                    <rect key="frame" x="130" y="6" width="278" height="60"/>
+                                                    <rect key="frame" x="130" y="6" width="239" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="o4V-U3-hEV"/>
                                                     </constraints>
@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-nh-HQ4">
-                                                    <rect key="frame" x="130" y="66" width="278" height="26.5"/>
+                                                    <rect key="frame" x="130" y="66" width="239" height="26.5"/>
                                                     <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -139,7 +139,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aBj-Ln-8m9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7kR-6Z-giq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
@@ -160,17 +160,17 @@
             <objects>
                 <viewController id="8QL-lX-p0K" customClass="CreateBookVC" customModule="Book_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rq9-YN-kJR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uee-xQ-rQf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-Bx-zgN">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="720"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hej-qp-Olg">
-                                                <rect key="frame" x="154" y="203" width="106" height="33"/>
+                                                <rect key="frame" x="134.5" y="203" width="106" height="33"/>
                                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                                 <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -178,7 +178,7 @@
                                                 <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Cover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-d0-6Dc">
-                                                <rect key="frame" x="148" y="30" width="118" height="33"/>
+                                                <rect key="frame" x="128.5" y="30" width="118" height="33"/>
                                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                                 <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -186,13 +186,13 @@
                                                 <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RyS-OL-lMh">
-                                                <rect key="frame" x="20" y="256" width="369" height="34"/>
+                                                <rect key="frame" x="20" y="256" width="330" height="34"/>
                                                 <color key="backgroundColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTy-Wd-pYo">
-                                                <rect key="frame" x="140" y="320" width="134" height="33"/>
+                                                <rect key="frame" x="120.5" y="320" width="134" height="33"/>
                                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                                 <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -200,13 +200,13 @@
                                                 <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsP-iE-6ul">
-                                                <rect key="frame" x="20" y="373.5" width="369" height="34"/>
+                                                <rect key="frame" x="20" y="373.5" width="330" height="34"/>
                                                 <color key="backgroundColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="0.52287564210000004" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Quotes/Thoughts/Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbY-ss-JIo">
-                                                <rect key="frame" x="93.5" y="441" width="227" height="33"/>
+                                                <rect key="frame" x="74" y="441" width="227" height="33"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
                                                 <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -215,7 +215,7 @@
                                                 <size key="shadowOffset" width="0.0" height="1"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2Y-Xp-cgh" customClass="CustomText" customModule="Book_List_App" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="494" width="369" height="120"/>
+                                                <rect key="frame" x="20" y="494" width="330" height="120"/>
                                                 <color key="backgroundColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="0.50398651539999995" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="JCm-Bc-GAz"/>
@@ -229,7 +229,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-bJ-9aU" customClass="CustomButton" customModule="Book_List_App" customModuleProvider="target">
-                                                <rect key="frame" x="25" y="664" width="364" height="30"/>
+                                                <rect key="frame" x="25" y="640" width="325" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="TTm-sU-1NB"/>
                                                 </constraints>
@@ -253,7 +253,7 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-v2-QzG" customClass="CustomImageView" customModule="Book_List_App" customModuleProvider="target">
-                                                <rect key="frame" x="157" y="83" width="100" height="100"/>
+                                                <rect key="frame" x="137.5" y="83" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="P3J-5Q-4Cp"/>
                                                     <constraint firstAttribute="width" constant="100" id="zZ3-R0-GEz"/>
@@ -271,7 +271,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-tV-6Bb">
-                                                <rect key="frame" x="184" y="122" width="46" height="22"/>
+                                                <rect key="frame" x="164.5" y="122" width="46" height="22"/>
                                                 <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
                                                 <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -287,12 +287,13 @@
                                             <constraint firstItem="IaX-d0-6Dc" firstAttribute="top" secondItem="fyd-Bx-zgN" secondAttribute="top" constant="30" id="GPL-j7-K4g"/>
                                             <constraint firstItem="d2Y-Xp-cgh" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" constant="20" id="QjC-oT-hiD"/>
                                             <constraint firstItem="GsP-iE-6ul" firstAttribute="top" secondItem="LTy-Wd-pYo" secondAttribute="bottom" constant="20.5" id="Tfk-Mm-KYS"/>
+                                            <constraint firstAttribute="height" constant="720" id="UWZ-4v-Yih"/>
                                             <constraint firstItem="hej-qp-Olg" firstAttribute="top" secondItem="VY8-v2-QzG" secondAttribute="bottom" constant="20" id="UcG-dw-C24"/>
                                             <constraint firstItem="LTy-Wd-pYo" firstAttribute="top" secondItem="RyS-OL-lMh" secondAttribute="bottom" constant="30" id="YGe-L1-vvc"/>
                                             <constraint firstItem="lAp-tV-6Bb" firstAttribute="centerY" secondItem="VY8-v2-QzG" secondAttribute="centerY" id="aYS-W3-p6e"/>
-                                            <constraint firstItem="lkO-bJ-9aU" firstAttribute="top" secondItem="d2Y-Xp-cgh" secondAttribute="bottom" constant="50" id="cFq-ZE-yWT"/>
                                             <constraint firstItem="hej-qp-Olg" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="cq3-cU-EKM"/>
                                             <constraint firstItem="VY8-v2-QzG" firstAttribute="top" secondItem="IaX-d0-6Dc" secondAttribute="bottom" constant="20" id="cyN-fT-gyJ"/>
+                                            <constraint firstItem="lkO-bJ-9aU" firstAttribute="top" secondItem="d2Y-Xp-cgh" secondAttribute="bottom" constant="26" id="fdU-pK-GLz"/>
                                             <constraint firstItem="lAp-tV-6Bb" firstAttribute="centerX" secondItem="VY8-v2-QzG" secondAttribute="centerX" id="gT9-6z-g2O"/>
                                             <constraint firstItem="VY8-v2-QzG" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="gen-jL-8En"/>
                                             <constraint firstItem="lkO-bJ-9aU" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" constant="25" id="lVA-Hv-sH0"/>
@@ -312,7 +313,6 @@
                                     <constraint firstItem="Bcg-Mv-KNq" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" id="EJc-qj-Rkd"/>
                                     <constraint firstItem="Bcg-Mv-KNq" firstAttribute="top" secondItem="fyd-Bx-zgN" secondAttribute="top" id="KXp-vm-AGY"/>
                                     <constraint firstItem="fyd-Bx-zgN" firstAttribute="trailing" secondItem="Bcg-Mv-KNq" secondAttribute="trailing" id="MSC-35-MfA"/>
-                                    <constraint firstItem="fyd-Bx-zgN" firstAttribute="centerY" secondItem="uee-xQ-rQf" secondAttribute="centerY" id="vGb-Ew-BwP"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Bcg-Mv-KNq"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="MnJ-v3-S13"/>
@@ -354,24 +354,24 @@
             <objects>
                 <viewController storyboardIdentifier="bookDetails" title="My Book" id="2ho-Eo-qc6" customClass="BookDetailsVC" customModule="Book_List_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gt2-6c-poC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-8V-OJ2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="860"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="709"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bb-FH-UI2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="860"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23e-9n-j3L">
-                                                <rect key="frame" x="20" y="193" width="374" height="647"/>
+                                                <rect key="frame" x="20" y="193" width="335" height="723"/>
                                                 <string key="text">Here are the notes “Rrow itself, let it be sorrow; let him love it; let him pursue it, ishing for its acquisitiendum. Because he will ab hold, uniess but through concer, and also of those who resist. Now a pure snore disturbeded sum dust. He ejjnoyes, in order that somewon, also with a severe one, unless of life. May a cusstums offficer somewon nothing of a poison-filled. Until, from a twho, twho chaffinch may also pursue it, not even a lump. But as twho, as a tank; a proverb, yeast; or else they tinscribe nor. Yet yet dewlap bed. Twho may be, let him love fellows of a polecat. Now amour, the, twhose being, drunk, yet twhitch and, an enclosed valley’s always a laugh. In acquisitiendum the Furies are Earth; in (he takes up) a lump vehicles bien.”</string>
                                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="32"/>
                                                 <color key="textColor" red="0.90196078430000004" green="0.81568627449999997" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-I8-xvw">
-                                                <rect key="frame" x="130" y="90.5" width="264" height="30.5"/>
+                                                <rect key="frame" x="130" y="90.5" width="225" height="30.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30.5" id="Kgo-T1-7Lp"/>
                                                 </constraints>
@@ -392,7 +392,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-lv-qp8">
-                                                <rect key="frame" x="130" y="37" width="264" height="38"/>
+                                                <rect key="frame" x="130" y="37" width="225" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="Yi2-pu-4ii"/>
                                                 </constraints>
