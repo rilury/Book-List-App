@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aBj-Ln-8m9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Books-->
+        <scene sceneID="SCh-mj-8Ob">
+            <objects>
+                <viewController storyboardIdentifier="BookListVC" id="fKd-p0-yhx" customClass="BookListVC" customModule="Book_List_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rkD-yV-Uth">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StF-LJ-2WI">
+                                <rect key="frame" x="41.5" y="161.5" width="331" height="242.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any book saved. HIt + to add some books!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tW2-DL-Bms">
+                                        <rect key="frame" x="20" y="97.5" width="291" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="tW2-DL-Bms" firstAttribute="leading" secondItem="StF-LJ-2WI" secondAttribute="leading" constant="20" id="Tk5-rE-27j"/>
+                                    <constraint firstItem="tW2-DL-Bms" firstAttribute="centerY" secondItem="StF-LJ-2WI" secondAttribute="centerY" id="e2M-pS-I6L"/>
+                                    <constraint firstAttribute="trailing" secondItem="tW2-DL-Bms" secondAttribute="trailing" constant="20" id="ycb-Ad-5bC"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tic-xL-xSI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bookListCell" rowHeight="120" id="92F-ps-3aI" customClass="BookTableViewCell" customModule="Book_List_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="92F-ps-3aI" id="v1b-PL-eeN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UsE-Yd-A8d" customClass="CustomImageView" customModule="Book_List_App" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="10" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="Scw-i2-nc9"/>
+                                                        <constraint firstAttribute="width" constant="100" id="odK-yI-XIq"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                            <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.61154216610000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                            <real key="value" value="2"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ocl-9N-1pr">
+                                                    <rect key="frame" x="130" y="6" width="278" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="o4V-U3-hEV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="29"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-nh-HQ4">
+                                                    <rect key="frame" x="130" y="66" width="278" height="26.5"/>
+                                                    <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UsE-Yd-A8d" firstAttribute="top" secondItem="v1b-PL-eeN" secondAttribute="top" constant="10" id="0DF-j9-nwJ"/>
+                                                <constraint firstItem="Bp6-nh-HQ4" firstAttribute="leading" secondItem="ocl-9N-1pr" secondAttribute="leading" id="4KJ-Jm-5R0"/>
+                                                <constraint firstItem="Bp6-nh-HQ4" firstAttribute="trailing" secondItem="ocl-9N-1pr" secondAttribute="trailing" id="9gG-j9-gKZ"/>
+                                                <constraint firstItem="ocl-9N-1pr" firstAttribute="leading" secondItem="UsE-Yd-A8d" secondAttribute="trailing" constant="10" id="HXJ-tN-J4e"/>
+                                                <constraint firstItem="UsE-Yd-A8d" firstAttribute="leading" secondItem="v1b-PL-eeN" secondAttribute="leading" constant="20" id="LMZ-WY-5cQ"/>
+                                                <constraint firstItem="Bp6-nh-HQ4" firstAttribute="top" secondItem="ocl-9N-1pr" secondAttribute="bottom" id="MAj-XG-OqG"/>
+                                                <constraint firstAttribute="trailing" secondItem="ocl-9N-1pr" secondAttribute="trailing" constant="6" id="W2D-wy-jKO"/>
+                                                <constraint firstItem="ocl-9N-1pr" firstAttribute="top" secondItem="v1b-PL-eeN" secondAttribute="top" constant="6" id="bTi-x4-oaN"/>
+                                                <constraint firstAttribute="bottom" secondItem="UsE-Yd-A8d" secondAttribute="bottom" constant="10" id="sfw-ag-QrX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="authorName" destination="Bp6-nh-HQ4" id="LfM-iw-6eR"/>
+                                            <outlet property="bookCover" destination="UsE-Yd-A8d" id="NEg-2Z-Te0"/>
+                                            <outlet property="titleLabel" destination="ocl-9N-1pr" id="bOC-cc-LIV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fKd-p0-yhx" id="cV7-us-iQD"/>
+                                    <outlet property="delegate" destination="fKd-p0-yhx" id="iX1-qS-i83"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="StF-LJ-2WI" firstAttribute="height" secondItem="rkD-yV-Uth" secondAttribute="height" multiplier="0.3" id="6Jg-yS-rbC"/>
+                            <constraint firstItem="Tic-xL-xSI" firstAttribute="leading" secondItem="gdD-5Z-rhk" secondAttribute="leading" id="Etz-n7-JAj"/>
+                            <constraint firstItem="StF-LJ-2WI" firstAttribute="centerX" secondItem="rkD-yV-Uth" secondAttribute="centerX" id="RwI-d8-RZr"/>
+                            <constraint firstItem="gdD-5Z-rhk" firstAttribute="trailing" secondItem="Tic-xL-xSI" secondAttribute="trailing" id="Uf2-Ix-wxZ"/>
+                            <constraint firstItem="gdD-5Z-rhk" firstAttribute="bottom" secondItem="Tic-xL-xSI" secondAttribute="bottom" id="Vme-sy-KgC"/>
+                            <constraint firstItem="StF-LJ-2WI" firstAttribute="centerY" secondItem="rkD-yV-Uth" secondAttribute="centerY" multiplier="0.7" id="hGd-Nx-95D"/>
+                            <constraint firstItem="StF-LJ-2WI" firstAttribute="width" secondItem="rkD-yV-Uth" secondAttribute="width" multiplier="0.8" id="mZH-eD-X1y"/>
+                            <constraint firstItem="Tic-xL-xSI" firstAttribute="top" secondItem="gdD-5Z-rhk" secondAttribute="top" id="qfm-fX-G6b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gdD-5Z-rhk"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="My Books" id="eJi-al-Ipo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="g5f-Vu-RhX">
+                            <connections>
+                                <segue destination="8QL-lX-p0K" kind="show" id="1Mr-4Y-uWO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="emptyView" destination="StF-LJ-2WI" id="q9W-7w-baf"/>
+                        <outlet property="tableView" destination="Tic-xL-xSI" id="cfa-7V-AjC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PjJ-4x-MpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="-1021.2053571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="DMp-ui-c24">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aBj-Ln-8m9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7kR-6Z-giq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fKd-p0-yhx" kind="relationship" relationship="rootViewController" id="3Hu-yQ-fhx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbV-MK-bH5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324.63768115942031" y="-1021.2053571428571"/>
+        </scene>
+        <!--Create BookVC-->
+        <scene sceneID="3tb-32-AKE">
+            <objects>
+                <viewController id="8QL-lX-p0K" customClass="CreateBookVC" customModule="Book_List_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rq9-YN-kJR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uee-xQ-rQf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fyd-Bx-zgN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hej-qp-Olg">
+                                                <rect key="frame" x="154" y="203" width="106" height="33"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Cover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaX-d0-6Dc">
+                                                <rect key="frame" x="148" y="30" width="118" height="33"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RyS-OL-lMh">
+                                                <rect key="frame" x="20" y="256" width="369" height="34"/>
+                                                <color key="backgroundColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTy-Wd-pYo">
+                                                <rect key="frame" x="140" y="320" width="134" height="33"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GsP-iE-6ul">
+                                                <rect key="frame" x="20" y="373.5" width="369" height="34"/>
+                                                <color key="backgroundColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="0.52287564210000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Quotes/Thoughts/Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbY-ss-JIo">
+                                                <rect key="frame" x="93.5" y="441" width="227" height="33"/>
+                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="25"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2Y-Xp-cgh" customClass="CustomText" customModule="Book_List_App" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="494" width="369" height="120"/>
+                                                <color key="backgroundColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="0.50398651539999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="JCm-Bc-GAz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkO-bJ-9aU" customClass="CustomButton" customModule="Book_List_App" customModuleProvider="target">
+                                                <rect key="frame" x="25" y="664" width="364" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="TTm-sU-1NB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="28"/>
+                                                <state key="normal" title="Save Book">
+                                                    <color key="titleColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="saveBook:" destination="8QL-lX-p0K" eventType="touchUpInside" id="Cbx-vi-lPM"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="books" translatesAutoresizingMaskIntoConstraints="NO" id="VY8-v2-QzG" customClass="CustomImageView" customModule="Book_List_App" customModuleProvider="target">
+                                                <rect key="frame" x="157" y="83" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="P3J-5Q-4Cp"/>
+                                                    <constraint firstAttribute="width" constant="100" id="zZ3-R0-GEz"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.61154216610000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAp-tV-6Bb">
+                                                <rect key="frame" x="184" y="122" width="46" height="22"/>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="17"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="RbY-ss-JIo" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="4aM-ZG-ySH"/>
+                                            <constraint firstItem="d2Y-Xp-cgh" firstAttribute="top" secondItem="RbY-ss-JIo" secondAttribute="bottom" constant="20" id="6Zj-qf-81i"/>
+                                            <constraint firstAttribute="trailing" secondItem="RyS-OL-lMh" secondAttribute="trailing" constant="25" id="6s7-jd-6i5"/>
+                                            <constraint firstAttribute="trailing" secondItem="lkO-bJ-9aU" secondAttribute="trailing" constant="25" id="9VO-VW-GUk"/>
+                                            <constraint firstAttribute="trailing" secondItem="GsP-iE-6ul" secondAttribute="trailing" constant="25" id="ARI-hh-G72"/>
+                                            <constraint firstItem="IaX-d0-6Dc" firstAttribute="top" secondItem="fyd-Bx-zgN" secondAttribute="top" constant="30" id="GPL-j7-K4g"/>
+                                            <constraint firstItem="d2Y-Xp-cgh" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" constant="20" id="QjC-oT-hiD"/>
+                                            <constraint firstItem="GsP-iE-6ul" firstAttribute="top" secondItem="LTy-Wd-pYo" secondAttribute="bottom" constant="20.5" id="Tfk-Mm-KYS"/>
+                                            <constraint firstItem="hej-qp-Olg" firstAttribute="top" secondItem="VY8-v2-QzG" secondAttribute="bottom" constant="20" id="UcG-dw-C24"/>
+                                            <constraint firstItem="LTy-Wd-pYo" firstAttribute="top" secondItem="RyS-OL-lMh" secondAttribute="bottom" constant="30" id="YGe-L1-vvc"/>
+                                            <constraint firstItem="lAp-tV-6Bb" firstAttribute="centerY" secondItem="VY8-v2-QzG" secondAttribute="centerY" id="aYS-W3-p6e"/>
+                                            <constraint firstItem="lkO-bJ-9aU" firstAttribute="top" secondItem="d2Y-Xp-cgh" secondAttribute="bottom" constant="50" id="cFq-ZE-yWT"/>
+                                            <constraint firstItem="hej-qp-Olg" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="cq3-cU-EKM"/>
+                                            <constraint firstItem="VY8-v2-QzG" firstAttribute="top" secondItem="IaX-d0-6Dc" secondAttribute="bottom" constant="20" id="cyN-fT-gyJ"/>
+                                            <constraint firstItem="lAp-tV-6Bb" firstAttribute="centerX" secondItem="VY8-v2-QzG" secondAttribute="centerX" id="gT9-6z-g2O"/>
+                                            <constraint firstItem="VY8-v2-QzG" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="gen-jL-8En"/>
+                                            <constraint firstItem="lkO-bJ-9aU" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" constant="25" id="lVA-Hv-sH0"/>
+                                            <constraint firstItem="IaX-d0-6Dc" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="m1z-Xf-lqf"/>
+                                            <constraint firstItem="RyS-OL-lMh" firstAttribute="top" secondItem="hej-qp-Olg" secondAttribute="bottom" constant="20" id="mA2-pz-glD"/>
+                                            <constraint firstItem="LTy-Wd-pYo" firstAttribute="centerX" secondItem="fyd-Bx-zgN" secondAttribute="centerX" id="oxA-bp-Lev"/>
+                                            <constraint firstItem="RyS-OL-lMh" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" constant="20" id="sfG-7A-ACD"/>
+                                            <constraint firstAttribute="trailing" secondItem="d2Y-Xp-cgh" secondAttribute="trailing" constant="25" id="t5f-FT-bwV"/>
+                                            <constraint firstItem="RbY-ss-JIo" firstAttribute="top" secondItem="GsP-iE-6ul" secondAttribute="bottom" constant="33.5" id="uj1-3m-BMz"/>
+                                            <constraint firstItem="GsP-iE-6ul" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" constant="20" id="vjo-Lu-0o9"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fyd-Bx-zgN" firstAttribute="width" secondItem="MnJ-v3-S13" secondAttribute="width" id="1V6-XF-pQy"/>
+                                    <constraint firstItem="fyd-Bx-zgN" firstAttribute="bottom" secondItem="Bcg-Mv-KNq" secondAttribute="bottom" id="488-lk-lSB"/>
+                                    <constraint firstItem="Bcg-Mv-KNq" firstAttribute="leading" secondItem="fyd-Bx-zgN" secondAttribute="leading" id="EJc-qj-Rkd"/>
+                                    <constraint firstItem="Bcg-Mv-KNq" firstAttribute="top" secondItem="fyd-Bx-zgN" secondAttribute="top" id="KXp-vm-AGY"/>
+                                    <constraint firstItem="fyd-Bx-zgN" firstAttribute="trailing" secondItem="Bcg-Mv-KNq" secondAttribute="trailing" id="MSC-35-MfA"/>
+                                    <constraint firstItem="fyd-Bx-zgN" firstAttribute="centerY" secondItem="uee-xQ-rQf" secondAttribute="centerY" id="vGb-Ew-BwP"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Bcg-Mv-KNq"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="MnJ-v3-S13"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uXT-gh-OXo" firstAttribute="bottom" secondItem="uee-xQ-rQf" secondAttribute="bottom" id="hq1-4E-kBC"/>
+                            <constraint firstItem="uee-xQ-rQf" firstAttribute="leading" secondItem="uXT-gh-OXo" secondAttribute="leading" id="jCW-Sh-PrV"/>
+                            <constraint firstItem="uXT-gh-OXo" firstAttribute="trailing" secondItem="uee-xQ-rQf" secondAttribute="trailing" id="wFs-rO-vYO"/>
+                            <constraint firstItem="uee-xQ-rQf" firstAttribute="top" secondItem="uXT-gh-OXo" secondAttribute="top" id="wml-8C-j8U"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uXT-gh-OXo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iXl-lK-JZx">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="NOc-ZC-ru1">
+                            <connections>
+                                <action selector="cancelButton:" destination="8QL-lX-p0K" id="Vw9-6t-Y0v"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="authorName" destination="GsP-iE-6ul" id="sOn-NS-mBH"/>
+                        <outlet property="bookCover" destination="VY8-v2-QzG" id="qAu-7s-zJN"/>
+                        <outlet property="bookCoverTopConstraint" destination="GPL-j7-K4g" id="SDu-eF-7pL"/>
+                        <outlet property="bookNotes" destination="d2Y-Xp-cgh" id="Mmx-8O-C9m"/>
+                        <outlet property="bookTitle" destination="RyS-OL-lMh" id="N6J-4b-XpG"/>
+                        <outlet property="choosePhotoLabel" destination="lAp-tV-6Bb" id="Xdd-5N-ewa"/>
+                        <outlet property="containerView" destination="fyd-Bx-zgN" id="or6-bf-vQg"/>
+                        <outlet property="scrollView" destination="uee-xQ-rQf" id="tBd-9V-joT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ed-Oo-4Hu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2201" y="-1021"/>
+        </scene>
+        <!--My Book-->
+        <scene sceneID="A3E-ag-L1a">
+            <objects>
+                <viewController storyboardIdentifier="bookDetails" title="My Book" id="2ho-Eo-qc6" customClass="BookDetailsVC" customModule="Book_List_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gt2-6c-poC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-8V-OJ2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="860"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bb-FH-UI2">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="860"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23e-9n-j3L">
+                                                <rect key="frame" x="20" y="193" width="374" height="647"/>
+                                                <string key="text">Here are the notes “Rrow itself, let it be sorrow; let him love it; let him pursue it, ishing for its acquisitiendum. Because he will ab hold, uniess but through concer, and also of those who resist. Now a pure snore disturbeded sum dust. He ejjnoyes, in order that somewon, also with a severe one, unless of life. May a cusstums offficer somewon nothing of a poison-filled. Until, from a twho, twho chaffinch may also pursue it, not even a lump. But as twho, as a tank; a proverb, yeast; or else they tinscribe nor. Yet yet dewlap bed. Twho may be, let him love fellows of a polecat. Now amour, the, twhose being, drunk, yet twhitch and, an enclosed valley’s always a laugh. In acquisitiendum the Furies are Earth; in (he takes up) a lump vehicles bien.”</string>
+                                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="32"/>
+                                                <color key="textColor" red="0.90196078430000004" green="0.81568627449999997" blue="0.63137254899999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-I8-xvw">
+                                                <rect key="frame" x="130" y="90.5" width="264" height="30.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30.5" id="Kgo-T1-7Lp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="24"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sd-UU-Nng">
+                                                <rect key="frame" x="20" y="135" width="147" height="48"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="FrR-Ma-y2T"/>
+                                                    <constraint firstAttribute="width" constant="147" id="e8z-gZ-DTQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="26"/>
+                                                <color key="textColor" red="0.63525142769999998" green="0.53145406449999999" blue="0.30423106960000001" alpha="0.61154216610000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Book Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uuF-lv-qp8">
+                                                <rect key="frame" x="130" y="37" width="264" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="Yi2-pu-4ii"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SnellRoundhand" family="Snell Roundhand" pointSize="30"/>
+                                                <color key="textColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.9018678617" green="0.81571051709999998" blue="0.63109090440000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="1"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y84-VP-Ica" customClass="CustomImageView" customModule="Book_List_App" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="27" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Mwh-fs-uej"/>
+                                                    <constraint firstAttribute="width" constant="100" id="eV3-as-SxO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="0.61154216610000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="50"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="uuF-lv-qp8" firstAttribute="top" secondItem="6bb-FH-UI2" secondAttribute="top" constant="37" id="7ob-bh-NRu"/>
+                                            <constraint firstItem="23e-9n-j3L" firstAttribute="top" secondItem="8sd-UU-Nng" secondAttribute="bottom" constant="10" id="Apc-CL-idE"/>
+                                            <constraint firstAttribute="trailing" secondItem="axD-I8-xvw" secondAttribute="trailing" constant="20" id="EQB-tF-Ysh"/>
+                                            <constraint firstItem="Y84-VP-Ica" firstAttribute="top" secondItem="6bb-FH-UI2" secondAttribute="top" constant="27" id="GCM-IZ-Jtn"/>
+                                            <constraint firstItem="23e-9n-j3L" firstAttribute="leading" secondItem="6bb-FH-UI2" secondAttribute="leading" constant="20" id="QZd-yd-E8M"/>
+                                            <constraint firstAttribute="bottom" secondItem="23e-9n-j3L" secondAttribute="bottom" constant="20" id="Uk3-wQ-txm"/>
+                                            <constraint firstItem="8sd-UU-Nng" firstAttribute="leading" secondItem="6bb-FH-UI2" secondAttribute="leading" constant="20" id="cfm-A5-f9H"/>
+                                            <constraint firstAttribute="trailing" secondItem="23e-9n-j3L" secondAttribute="trailing" constant="20" id="fN6-2K-T5B"/>
+                                            <constraint firstItem="uuF-lv-qp8" firstAttribute="leading" secondItem="Y84-VP-Ica" secondAttribute="trailing" constant="10" id="i9q-nK-Ggp"/>
+                                            <constraint firstItem="axD-I8-xvw" firstAttribute="leading" secondItem="uuF-lv-qp8" secondAttribute="leading" id="lEC-XB-EF5"/>
+                                            <constraint firstAttribute="trailing" secondItem="uuF-lv-qp8" secondAttribute="trailing" constant="20" id="nTV-ef-n0e"/>
+                                            <constraint firstItem="Y84-VP-Ica" firstAttribute="leading" secondItem="6bb-FH-UI2" secondAttribute="leading" constant="20" id="qJe-nc-IUE"/>
+                                            <constraint firstItem="axD-I8-xvw" firstAttribute="top" secondItem="uuF-lv-qp8" secondAttribute="bottom" constant="15.5" id="tFt-qC-P83"/>
+                                            <constraint firstItem="8sd-UU-Nng" firstAttribute="top" secondItem="Y84-VP-Ica" secondAttribute="bottom" constant="8" id="vnE-Uc-kFv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6bb-FH-UI2" firstAttribute="width" secondItem="L1I-8V-OJ2" secondAttribute="width" id="2yG-Ih-w3Z"/>
+                                    <constraint firstItem="6bb-FH-UI2" firstAttribute="leading" secondItem="L1I-8V-OJ2" secondAttribute="leading" id="hxA-uP-vAT"/>
+                                    <constraint firstAttribute="trailing" secondItem="6bb-FH-UI2" secondAttribute="trailing" id="iGP-L4-t20"/>
+                                    <constraint firstItem="6bb-FH-UI2" firstAttribute="top" secondItem="L1I-8V-OJ2" secondAttribute="top" id="uRS-gj-aNE"/>
+                                    <constraint firstAttribute="bottom" secondItem="6bb-FH-UI2" secondAttribute="bottom" id="zoO-zB-fIo"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gId-Ys-foC" firstAttribute="top" secondItem="L1I-8V-OJ2" secondAttribute="top" id="IFH-wA-VzE"/>
+                            <constraint firstItem="gId-Ys-foC" firstAttribute="leading" secondItem="L1I-8V-OJ2" secondAttribute="leading" id="Nfo-yT-fNs"/>
+                            <constraint firstItem="gId-Ys-foC" firstAttribute="trailing" secondItem="L1I-8V-OJ2" secondAttribute="trailing" id="XSK-rD-NQc"/>
+                            <constraint firstItem="L1I-8V-OJ2" firstAttribute="bottom" secondItem="gId-Ys-foC" secondAttribute="bottom" constant="42" id="jcF-Ro-Jcr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gId-Ys-foC"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="axD-I8-xvw" id="JcB-jx-qAG"/>
+                        <outlet property="bookCover" destination="Y84-VP-Ica" id="C2u-UM-3aZ"/>
+                        <outlet property="bookNotesLabel" destination="23e-9n-j3L" id="vOP-Lx-vet"/>
+                        <outlet property="bookTitleLabel" destination="uuF-lv-qp8" id="tvh-0J-3iy"/>
+                        <outlet property="containerView" destination="6bb-FH-UI2" id="tG5-0T-Flf"/>
+                        <outlet property="scrollView" destination="L1I-8V-OJ2" id="RBq-2O-6GX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AfK-fY-Jdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076.811594202899" y="-1021.2053571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="books" width="16" height="16"/>
+    </resources>
+    <color key="tintColor" red="0.90196078431372551" green="0.81568627450980391" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
